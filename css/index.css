@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    background-color: #CDC5BF;
+}
+.wrapper{   
+    margin: 50px auto;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #fff ;
+}
+/*
+  使图标和字居中的方式
+  1. line-height
+  2. padding
+*/
+.title{
+    position: relative;
+    padding: 15px 12px;
+    background: #008B8B;
+    border-bottom: 1px solid #2B2B2B;
+}
+/* 
+  图标移动位置用position属性
+*/
+.iconfont{
+    font-size: 20px;
+}
+.icon-mark{
+    margin-right: 10px;
+}
+.icon-arrow{
+    position: absolute;
+    right: 10px;   
+}
+.secondaryMenu{
+    display: none;    
+}
+.list{
+    padding: 10px 48px;
+    background-color: #5E5E5E;
+    border-bottom: 1px solid #2B2B2B;
+}
+
+
+/* active设置在item上 让箭头有动画的效果 */
+.item .title i:nth-of-type(2) {
+    transition: transform 0.5s ease-out;
+    transform: rotateZ(0deg);   
+}
+.active .title i:nth-of-type(2){
+    transform: rotateZ(180deg);     
+}
+/* 鼠标上移有颜色变化 */
+.active .secondaryMenu li:hover{
+    cursor: pointer;
+    background-color: #1874CD;
+}
+
+/*
+    transition
+        transition-property: 指定CSSS属性的name transition效果
+        transition-duration: transition效果需要指定多少秒或多少毫秒才能完成
+        transition-timing-function: 指定transition效果的转速曲线
+            linear: 规定以相同速度开始至结束的过渡效果
+            ease: 规定慢速开始 然后变快 然后慢速结束的过渡效果
+            ease-in: 规定以慢速开始的过渡效果
+            ease-out: 规定以慢速结束的过渡效果
+            ease-in-out: 规定慢速开始和结束的过渡效果
+        transition-delay: 定义transition效果开始的时候
+*/
